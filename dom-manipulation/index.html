@@ -2,35 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dynamic Quote Generator</title>
 </head>
 <body>
 
   <h1>Dynamic Quote Generator</h1>
 
-  <!-- Category Filter (Task 2) -->
-  <select id="categoryFilter">
+  <!-- Task 2: Category Filter -->
+  <select id="categoryFilter" onchange="filterQuote()">
     <option value="all">All Categories</option>
   </select>
 
   <!-- Quote Display -->
   <div id="quoteDisplay"></div>
 
-  <!-- Show New Quote Button (Task 0 requirement) -->
+  <!-- Task 0: Show New Quote Button -->
   <button id="newQuote">Show New Quote</button>
 
-  <h3>Add a New Quote</h3>
-
-  <input id="newQuoteText" type="text" placeholder="Enter a new quote">
-  <input id="newQuoteCategory" type="text" placeholder="Enter quote category">
+  <!-- Add Quote -->
+  <input id="newQuoteText" placeholder="Enter a new quote">
+  <input id="newQuoteCategory" placeholder="Enter quote category">
   <button onclick="addQuote()">Add Quote</button>
 
-  <h3>Import / Export Quotes</h3>
-
+  <!-- Task 1: Export / Import -->
   <button id="exportQuotes">Export Quotes</button>
-  <input type="file" id="importFile" accept=".json">
+  <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)">
 
+  <!-- Task 3: Notifications -->
   <p id="notification"></p>
 
   <script src="script.js"></script>
