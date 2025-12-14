@@ -1,0 +1,9 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#quoteDisplay {
+  margin: 20px 0;
+  font-size: 18px;
+}
